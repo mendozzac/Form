@@ -3,14 +3,18 @@ const AccessData = () => {
     <form>
       <div class="form-group">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Username" />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre de usuario"
+          />
         </div>
-        <label for="exampleInputPassword1">Password</label>
+        <label for="exampleInputPassword1">Contraseña</label>
         <input
           type="password"
           class="form-control"
           id="exampleInputPassword1"
-          placeholder="Password"
+          placeholder="Contraseña"
         />
       </div>
     </form>
