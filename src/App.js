@@ -1,4 +1,5 @@
 import "./App.css";
+import señorX from "./señorX.png";
 import AccessData from "./component/AccessData/AccessData";
 import Login from "./component/Login/Login";
 import Navigation from "./component/Navigation/Navigation";
@@ -10,8 +11,13 @@ function App() {
     <>
       <div className="container">
         <Router>
-          <h1>¡HOLA mi gente!</h1>
+          <a href="/">
+            <h1>¡HOLA mi gente!</h1>
+          </a>
           <div className="app">
+            <Route path="/" exact>
+              <img src={señorX} alt="señor X" />
+            </Route>
             <Route component={PersonalData} path="/1" />
             <Route component={AccessData} path="/2" />
             <Route component={Login} path="/3" />
