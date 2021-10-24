@@ -26,6 +26,9 @@ const AccessData = () => {
           placeholder="Contraseña"
         />
       </div>
+      <button type="submit" className="btn btn-primary ">
+        Enviar
+      </button>
     </form>
   );
 };
