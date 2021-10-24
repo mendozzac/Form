@@ -18,9 +18,9 @@ function App() {
             <Route path="/" exact>
               <img src={segnorX} alt="señor X" />
             </Route>
-            <Route component={PersonalData} path="/1" />
-            <Route component={AccessData} path="/2" />
-            <Route component={Login} path="/3" />
+            <Route component={PersonalData} path="/1" exact />
+            <Route component={AccessData} path="/2" exact />
+            <Route component={Login} path="/3" exact />
           </div>
           <Navigation />
         </Router>
