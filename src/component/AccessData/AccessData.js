@@ -1,10 +1,26 @@
+import { useState } from "react";
+
 const AccessData = (personalData) => {
+  const initialAccessData = {
+    username: "",
+    password: "",
+    repeatPassword: "",
+  };
+
+  const [accessData, setAccessData] = useState(initialAccessData);
+
+  const changeData = (event) => {
+    setAccessData({
+      ...accessData,
+      [event.target.id]: event.target.value,
+    });
+  };
+
   const disabledButton = () => {
     if (
-      personalData.name &&
-      personalData.lastName &&
-      personalData.birthday &&
-      personalData.email
+      accessData.username &&
+      accessData.password &&
+      accessData.repeatPassword
     ) {
       return false;
     } else {
@@ -21,6 +37,9 @@ const AccessData = (personalData) => {
             type="text"
             className="form-control"
             placeholder="Nombre de usuario"
+            id="username"
+            value={accessData.username}
+            onChange={changeData}
             required
           />
         </div>
@@ -28,7 +47,9 @@ const AccessData = (personalData) => {
         <input
           type="password"
           className="form-control"
-          id="Password"
+          id="password"
+          value={accessData.password}
+          onChange={changeData}
           placeholder="Contraseña"
           required
         />
@@ -37,7 +58,9 @@ const AccessData = (personalData) => {
         <input
           type="password"
           className="form-control"
-          id="RepeatPassword"
+          id="repeatPassword"
+          value={accessData.repeatPassword}
+          onChange={changeData}
           placeholder="Contraseña"
           required
         />
