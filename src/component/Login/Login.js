@@ -1,4 +1,17 @@
-const Login = () => {
+const Login = (personalData) => {
+  const disabledButton = () => {
+    if (
+      personalData.name &&
+      personalData.lastName &&
+      personalData.birthday &&
+      personalData.email
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <form autoComplete="off">
       <div className="col">
@@ -28,7 +41,11 @@ const Login = () => {
         />
         <label className="form-check-label">Recordar</label>
       </div>
-      <button type="submit" className="btn btn-primary">
+      <button
+        type="submit"
+        className="btn btn-primary"
+        disabled={disabledButton()}
+      >
         Enviar
       </button>
     </form>
