@@ -1,6 +1,14 @@
 const Login = () => {
   return (
     <form>
+      <div className="col">
+        <label>Alias</label>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Nombre de usuario"
+        />
+      </div>
       <div className="form-group">
         <label>Contraseña</label>
         <input
