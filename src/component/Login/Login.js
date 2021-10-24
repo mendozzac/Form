@@ -1,11 +1,22 @@
-const Login = (personalData) => {
+import { useState } from "react";
+
+const Login = () => {
+  const initialLogin = {
+    username: "",
+    password: "",
+  };
+
+  const [login, setLogin] = useState(initialLogin);
+
+  const changeData = (event) => {
+    setLogin({
+      ...login,
+      [event.target.id]: event.target.value,
+    });
+  };
+
   const disabledButton = () => {
-    if (
-      personalData.name &&
-      personalData.lastName &&
-      personalData.birthday &&
-      personalData.email
-    ) {
+    if (login.username && login.password) {
       return false;
     } else {
       return true;
@@ -20,6 +31,9 @@ const Login = (personalData) => {
           type="text"
           className="form-control"
           placeholder="Nombre de usuario"
+          id="username"
+          value={login.username}
+          onChange={changeData}
           required
         />
       </div>
@@ -28,17 +42,15 @@ const Login = (personalData) => {
         <input
           type="password"
           className="form-control"
-          id="exampleInputPassword1"
+          id="password"
+          value={login.password}
+          onChange={changeData}
           placeholder="Contraseña"
           required
         />
       </div>
       <div className="form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="exampleCheck1"
-        />
+        <input type="checkbox" className="form-check-input" id="check" />
         <label className="form-check-label">Recordar</label>
       </div>
       <button
