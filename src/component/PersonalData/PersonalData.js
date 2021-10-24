@@ -41,6 +41,9 @@ const PersonalData = () => {
           Nunca compartiremos tu correo electrónico con nadie más.
         </small>
       </div>
+      <button type="submit" className="btn btn-primary">
+        Enviar
+      </button>
     </form>
   );
 };

@@ -23,3 +23,16 @@ form {
   flex-direction: column;
   justify-content: space-around;
 }
+
+.btn {
+  margin-top: 10px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.form-check-input {
+  margin-top: 15px;
+}
