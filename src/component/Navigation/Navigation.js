@@ -1,19 +1,19 @@
 const Navigation = () => {
   return (
     <nav aria-label="...">
-      <ul class="pagination pagination-lg">
-        <li class="page-item disabled">
-          <a class="page-link" href="1" tabindex="-1">
+      <ul className="pagination pagination-lg">
+        <li className="page-item ">
+          <a className="page-link" href="1">
             1
           </a>
         </li>
-        <li class="page-item">
-          <a class="page-link" href="2">
+        <li className="page-item">
+          <a className="page-link" href="2">
             2
           </a>
         </li>
-        <li class="page-item">
-          <a class="page-link" href="3">
+        <li className="page-item">
+          <a className="page-link" href="3">
             3
           </a>
         </li>
