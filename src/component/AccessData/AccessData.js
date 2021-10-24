@@ -1,6 +1,6 @@
 const AccessData = () => {
   return (
-    <form>
+    <form autoComplete="off">
       <div className="form-group">
         <div className="col">
           <label>Alias</label>
@@ -8,22 +8,25 @@ const AccessData = () => {
             type="text"
             className="form-control"
             placeholder="Nombre de usuario"
+            required
           />
         </div>
         <label>Contraseña</label>
         <input
           type="password"
           className="form-control"
-          id="exampleInputPassword1"
+          id="Password"
           placeholder="Contraseña"
+          required
         />
 
         <label>Confirma Contraseña</label>
         <input
           type="password"
           className="form-control"
-          id="exampleInputPassword2"
+          id="Password"
           placeholder="Contraseña"
+          required
         />
       </div>
       <button type="submit" className="btn btn-primary ">

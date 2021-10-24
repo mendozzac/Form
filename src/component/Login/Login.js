@@ -1,12 +1,13 @@
 const Login = () => {
   return (
-    <form>
+    <form autoComplete="off">
       <div className="col">
         <label>Alias</label>
         <input
           type="text"
           className="form-control"
           placeholder="Nombre de usuario"
+          required
         />
       </div>
       <div className="form-group">
@@ -16,6 +17,7 @@ const Login = () => {
           className="form-control"
           id="exampleInputPassword1"
           placeholder="Contraseña"
+          required
         />
       </div>
       <div className="form-check">
